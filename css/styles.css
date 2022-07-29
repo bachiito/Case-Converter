@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: burlywood;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.txt, .file-name, .btn-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.hero {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.hero hr {
+    border: 3px solid darkred;
+}
+
+.file-name label {
+    font-size: 1.125rem;
+}
+
+.file-name input[type="text"] {
+    font-size: 0.9rem;
+    width: 43.5%;
+    padding: 0.3em;
+}
+
+.file-name input[type="button"] {
+    margin: 0;
+    padding: 0.3em 0.5em;
+}
+
+.txt {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.txt textarea {
+    width: 100%;
+    font-size: 1rem;
+}
+
+.btn-container {
+    display: flex;
+}
+
+.btn {
+    background-color: darkred;
+    color: white;
+    width: 25%;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 0.5em;
+    padding: 0.5em 1em;
+}
+
+.btn:hover {
+    background-color: brown;
+}
+
+button:last-child {
+    margin: 0;
+}
