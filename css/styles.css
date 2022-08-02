@@ -16,33 +16,18 @@ body {
     margin: 0 auto;
 }
 
-form {
+.d-flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 1.25rem 0;
 }
 
-form * {
+.d-flex * {
     width: 22.5%;
 }
 
-.txt {
-    margin: 1.25rem 0;
-}
-
-.btn-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-/*  STYLING  */
-
-hr {
-    border: 3px solid darkred;
-}
-
-form input[type="text"] {
+.d-flex input[type="text"] {
     width: 52.5%;
     margin-left: -0.25em;
     padding: 0.35em 0.25em;
@@ -52,33 +37,50 @@ textarea {
     width: 100%;
 }
 
-.btn {
-    display: inline-block;
-    background-color: darkred;
-    color: white;
-    width: 22.5%;
-    cursor: pointer;
-    border: none;
-    font-size: 1.125rem;
-    font-weight: bold;
-    padding: 0.5em 1em;
-    border-radius: 100em;
+/*  STYLING  */
+
+hr {
+    border: 3px solid darkred;
 }
 
-.btn:hover, .btn:focus {
-    background-color: black;
+textarea:focus,
+input[type="text"]:focus {
+    border: 1.5px solid black;
+    outline: none;
+}
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    border-radius: 100em;
+    color: white;
+    background-color: darkred;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    transition: all 0.45s linear;
+}
+
+.btn:hover {
+    color: darkred;
+    box-shadow: inset  157.5px 0 white;
+}
+
+.btn:focus {
+
 }
 
 /*  TYPOGRAPHY  */
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 0.25em;
 }
 
 label {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
 }
 
 textarea,
