@@ -2,22 +2,21 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/styles.css">
         <title>Case Converter</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet"> 
     </head>
     <body>
+        <h1>Case Converter</h1>
+        <hr>
         <div class="container">
-            <div class="hero">
-                <h1>Case Converter</h1>
-                <hr>
-            </div>
-            <div class="file-name">
-                <form>
-                    <label>Name of your file: </label>
-                    <input id="file-name" type="text" name="file-name" required>
-                    <input id="save-text-file" class="btn" type="button" value="Save Text">
-                </form>
-            </div>
+            <form class="d-flex">
+                <label>Name of your file: </label>
+                <input id="file-name" type="text" name="file-name" required>
+                <button id="save-text-file" class="btn">Save File</button>
+            </form>
             <div class="txt">
                 <textarea rows="10"></textarea>
             </div>
@@ -26,8 +25,8 @@
                 <button id="lower-case" class="btn">Lower Case</button>
                 <button id="proper-case" class="btn">Proper Case</button>
                 <button id="sentence-case" class="btn">Sentence Case</button>
-            </div> <!--/btn-container -->
-        </div> <!-- /container -->
+            </div> <!-- /BTN-CONTAINER  -->
+        </div> <!-- /CONTAINER  -->
         <script src="js/index.js"></script>    
     </body>
 </html>
