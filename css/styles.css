@@ -11,7 +11,7 @@ body {
 /* LAYOUT */
 
 .container {
-    width: 90%;
+    width: 95%;
     max-width: 700px;
     margin: 0 auto;
 }
@@ -69,12 +69,12 @@ input[type="text"]:focus-visible {
 }
 
 .btn:hover {
-    color: darkred;
-    box-shadow: inset  157.5px 0 white; 
+    transform: scale(1.1);
 }
 
 .btn:active {
-    transform: scale(1.08);
+    color: darkred;
+    box-shadow: inset  157.5px 0 white; 
 }
 
 .example {
@@ -94,6 +94,7 @@ h2 {
     font-size: 1.75rem;
     text-align: center;
     margin-top: 1em;
+    margin-bottom: 0;
 }
 
 label {
@@ -104,4 +105,8 @@ textarea,
 input[type="text"]
 {
     font-size: 1rem;
+}
+
+p {
+    margin-top: 0.5em;
 }
