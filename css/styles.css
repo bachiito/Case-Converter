@@ -58,7 +58,7 @@ input[type="text"]:focus-visible {
     font-size: 1rem;
     font-weight: bold;
     padding: 0.5em 1em;
-    transition: all 0.45s linear;
+    transition: all 0.3s linear;
 }
 
 .btn:focus-visible {
@@ -69,12 +69,12 @@ input[type="text"]:focus-visible {
 }
 
 .btn:hover {
-    color: darkred;
-    box-shadow: inset  157.5px 0 white; 
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 .btn:active {
-    transform: scale(1.1);
+    opacity: 0.6;
 }
 
 .example {
