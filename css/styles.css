@@ -69,12 +69,12 @@ input[type="text"]:focus-visible {
 }
 
 .btn:hover {
-    transform: scale(1.1);
+    color: darkred;
+    box-shadow: inset  157.5px 0 white; 
 }
 
 .btn:active {
-    color: darkred;
-    box-shadow: inset  157.5px 0 white; 
+    transform: scale(1.1);
 }
 
 .example {
