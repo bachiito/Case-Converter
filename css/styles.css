@@ -1,113 +1,110 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    background-color: burlywood;
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+	background-color: burlywood;
 }
 
 /* LAYOUT */
 
 .container {
-    width: 95%;
-    max-width: 700px;
-    margin: 0 auto;
+	width: 95%;
+	max-width: 700px;
+	margin: 0 auto;
 }
 
 .d-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1.25rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 1.25rem 0;
 }
 
 .d-flex * {
-    width: 22.5%;
+	width: 22.5%;
 }
 
 .d-flex input[type="text"] {
-    width: 52.5%;
-    margin-left: -0.25em;
-    padding: 0.35em 0.25em;
+	width: 52.5%;
+	margin-left: -0.25em;
+	padding: 0.35em 0.25em;
 }
 
 textarea {
-    width: 100%;
+	width: 100%;
 }
 
 /* STYLING */
 
 hr {
-    border: 3px solid darkred;
+	border: 3px solid darkred;
 }
 
 textarea:focus-visible,
 input[type="text"]:focus-visible {
-    outline: 1.5px solid black;
+	outline: 1.5px solid black;
 }
 
 .btn {
-    display: inline-block;
-    cursor: pointer;
-    border: none;
-    border-radius: 100em;
-    color: white;
-    background-color: darkred;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0.5em 1em;
-    transition: all 0.3s linear;
+	display: inline-block;
+	cursor: pointer;
+	border: none;
+	border-radius: 100em;
+	color: white;
+	background-color: darkred;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.5em 1em;
+	transition: all 0.3s linear;
 }
 
 .btn:focus-visible {
-    outline: none;
-    box-shadow: 
-    0 0 0 3px burlywood, 
-    0 0 0 6px darkred;
+	outline: none;
+	box-shadow: 0 0 0 3px burlywood, 0 0 0 6px darkred;
 }
 
 .btn:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
+	transform: scale(1.1);
+	opacity: 0.8;
 }
 
 .btn:active {
-    opacity: 0.6;
+	opacity: 0.6;
 }
 
 .example {
-    color: darkred;
-    font-weight: 600;
+	color: darkred;
+	font-weight: 600;
 }
 
 /* TYPOGRAPHY */
 
 h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    padding-bottom: 0.25em;
-    border-bottom: 4px solid darkred;
+	font-size: 2.5rem;
+	text-align: center;
+	padding-bottom: 0.25em;
+	border-bottom: 4px solid darkred;
 }
 
 h2 {
-    font-size: 1.75rem;
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 0;
+	font-size: 1.75rem;
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 0;
 }
 
 label {
-    font-size: 1.1rem;
+	font-size: 1.1rem;
 }
 
 textarea,
-input[type="text"]
-{
-    font-size: 1rem;
+input[type="text"] {
+	font-size: 1rem;
 }
 
 p {
-    margin-top: 0.5em;
+	margin-top: 0.5em;
 }

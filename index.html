@@ -1,88 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="Abraham Rivera">
-        <meta name="description" content="Tool made to help you convert any text between different letter cases.">
-        <title>Case Converter</title>
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="shortcut icon" href="img\favicon.png" type="image\x-icon">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap"> 
-    </head>
-    
-    <body>
-        
-        <header>
-            <h1>Case Converter</h1>
-        </header>
-        
-        <main>
-            <div class="container">
-                
-                <!-- INPUT SECTION -->
-                <form class="d-flex">
-                    <label>Name of your file: </label>
-                    <input id="file-name" type="text" name="file-name" required>
-                    <button id="save-text-file" class="btn">Save File</button>
-                </form>
-                
-                <!-- TEXTAREA SECTION -->
-                <div class="txt">
-                    <textarea rows="10"></textarea>
-                </div>
-            
-                <!-- BUTTONS SECTION -->
-                <div class="d-flex">
-                    <button id="upper-case" class="btn">Upper Case</button>
-                    <button id="lower-case" class="btn">Lower Case</button>
-                    <button id="proper-case" class="btn">Proper Case</button>
-                    <button id="sentence-case" class="btn">Sentence Case</button>
-                </div>
-                
-                <!-- DESCRIPTION SECTION -->
-                <div class="description">
-                    <h2>Upper Case</h2>
-                    <p>The upper case is the case when each letter is in the upper case.</p>
-                    <p>For example, <span class="example">THIS IS THE UPPER CASE TEXT.</span></p>   
-                </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Abraham Rivera" />
+		<meta
+			name="description"
+			content="Tool made to help you convert any text between different letter cases."
+		/>
+		<title>Case Converter</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
+		/>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="shortcut icon" href="img\favicon.png" type="image\x-icon" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap"
+		/>
+	</head>
 
-                <div class="description">
-                    <h2>Lower Case</h2>
-                    <p>The lower case is the case when each letter is in the lower case.</p> 
-                    <p>For example, <span class="example">this is the lower case text.</span></p>  
-                </div>
+	<body>
+		<header>
+			<h1>Case Converter</h1>
+		</header>
 
-                <div class="description">
-                    <h2>Proper Case</h2>
-                    <p>
-                        The proper case is the case when each word starts with the upper case, and the rest of the
-                        word is in the lower.
-                    </p>
-                    <p>For example, <span class="example">This Is The Proper Case Text.</span></p>
-                </div>
+		<main>
+			<div class="container">
+				<!-- INPUT SECTION -->
+				<form class="d-flex">
+					<label>Name of your file: </label>
+					<input
+						id="file-name"
+						type="text"
+						name="file-name"
+						required
+					/>
+					<button id="save-text-file" class="btn">Save File</button>
+				</form>
 
-                <div class="description">
-                    <h2>Sentence Case</h2>
-                    <p>
-                        The sentence case is the case when each sentence starts with an upper case letter, and the rest of
-                        the sentence is in the lower case. 
-                    </p>
-                    <p>
-                        For example, <span class="example">This is the sentence case. Only the first word of the sentence
-                        starts with an upper case letter.</span>
-                    </p>
-                </div> <!-- /DESCRIPTION SECTION -->
-            </div> <!-- /CONTAINER  -->
-        </main>
-        
-        <footer>
+				<!-- TEXTAREA SECTION -->
+				<div class="txt">
+					<textarea rows="10"></textarea>
+				</div>
 
-        </footer>
+				<!-- BUTTONS SECTION -->
+				<div class="d-flex">
+					<button id="upper-case" class="btn">Upper Case</button>
+					<button id="lower-case" class="btn">Lower Case</button>
+					<button id="proper-case" class="btn">Proper Case</button>
+					<button id="sentence-case" class="btn">
+						Sentence Case
+					</button>
+				</div>
 
-        <script src="js/app.js"></script>
-    
-    </body>
+				<!-- DESCRIPTION SECTION -->
+				<div class="description">
+					<h2>Upper Case</h2>
+					<p>
+						The upper case is the case when each letter is in the
+						upper case.
+					</p>
+					<p>
+						For example,
+						<span class="example">
+							THIS IS THE UPPER CASE TEXT.
+						</span>
+					</p>
+				</div>
+
+				<div class="description">
+					<h2>Lower Case</h2>
+					<p>
+						The lower case is the case when each letter is in the
+						lower case.
+					</p>
+					<p>
+						For example,
+						<span class="example">
+							this is the lower case text.
+						</span>
+					</p>
+				</div>
+
+				<div class="description">
+					<h2>Proper Case</h2>
+					<p>
+						The proper case is the case when each word starts with
+						the upper case, and the rest of the word is in the
+						lower.
+					</p>
+					<p>
+						For example,
+						<span class="example">
+							This Is The Proper Case Text.
+						</span>
+					</p>
+				</div>
+
+				<div class="description">
+					<h2>Sentence Case</h2>
+					<p>
+						The sentence case is the case when each sentence start
+						swith an upper case letter, and the rest of the sentence
+						is in the lower case.
+					</p>
+					<p>
+						For example,
+						<span class="example">
+							This is the sentence case. Only the first word of
+							the sentence starts with an upper case letter.
+						</span>
+					</p>
+				</div>
+			</div>
+		</main>
+
+		<footer></footer>
+
+		<script src="js/app.js"></script>
+	</body>
 </html>
