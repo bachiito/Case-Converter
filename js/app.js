@@ -25,10 +25,7 @@ function properCase() {
 	const array = textArea.value.trim().toLowerCase().split(" ");
 	array.forEach(
 		word =>
-			(finalString += `${word
-				.charAt(0)
-				.toUpperCase()
-				.concat(word.slice(1))} `)
+			(finalString += `${word.charAt(0).toUpperCase().concat(word.slice(1))} `)
 	);
 	textArea.value = finalString.trim();
 }
