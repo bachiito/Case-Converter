@@ -42,10 +42,9 @@ textarea {
 }
 
 footer {
-	color: white;
-	background-color: #262626;
 	text-align: center;
-	padding: 1rem 0;
+	background-color: #262626;
+	padding: 1rem 0 0.5rem 0;
 }
 
 /* STYLING */
@@ -95,8 +94,18 @@ input[type="text"]:focus-visible {
 	color: white;
 }
 
-.small:hover .heart-fill[g-heart] {
-	fill: red;
+.small:hover .g-heart {
+	fill: #ff4b00;
+}
+
+.small:hover .svg-heart {
+	animation: heart-beat 0.5s linear forwards infinite alternate;
+}
+
+@keyframes heart-beat {
+	100% {
+		transform: scale(1.25);
+	}
 }
 
 /* TYPOGRAPHY */
@@ -105,14 +114,13 @@ h1 {
 	font-size: 2.5rem;
 	text-align: center;
 	padding-bottom: 0.25em;
-	border-bottom: 4px solid darkred;
+	border-bottom: 0.1em solid darkred;
 }
 
 h2 {
 	font-size: 1.75rem;
 	text-align: center;
-	margin-top: 1em;
-	margin-bottom: 0;
+	margin: 1em 0 0 0;
 }
 
 label {
@@ -130,5 +138,6 @@ p {
 
 .small {
 	color: grey;
-	font-size: smaller;
+	font-size: 0.75rem;
+	margin: 0;
 }
