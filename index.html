@@ -8,17 +8,13 @@
 			content="Tool made to help you convert any text between different letter cases."
 		/>
 		<title>Case Converter</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link rel="stylesheet" href="css/styles.css" />
 		<link rel="shortcut icon" href="img\favicon.png" type="image\x-icon" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap"
 			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
 		/>
 	</head>
 
@@ -30,16 +26,24 @@
 		<main>
 			<div class="container">
 				<!-- INPUT SECTION -->
-				<form class="d-flex">
-					<label>Name of your file: </label>
-					<input id="file-name" type="text" name="file-name" required />
-					<button id="save-text-file" class="btn">Save File</button>
+				<form id="text" class="d-flex">
+					<label for="file-name">Name of your file:</label>
+					<input
+						id="file-name"
+						name="file-name"
+						type="text"
+						autocomplete="on"
+					/>
+					<button id="save-text" class="btn" type="submit">Save File</button>
 				</form>
 
-				<!-- TEXTAREA SECTION -->
-				<div class="txt">
-					<textarea rows="10"></textarea>
-				</div>
+				<textarea
+					form="text"
+					name="text"
+					rows="10"
+					spellcheck="true"
+					autofocus
+				></textarea>
 
 				<!-- BUTTONS SECTION -->
 				<div class="d-flex">
@@ -148,6 +152,8 @@
 					</g>
 				</svg>
 				by bachito
+				<br />
+				&copy Copyright 2022
 			</p>
 		</footer>
 

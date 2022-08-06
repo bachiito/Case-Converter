@@ -61,9 +61,9 @@ function sentenceCase() {
  * File saving function
  */
 
-let saveBtn = document.getElementById("save-text-file");
+let saveBtn = document.getElementById("save-text");
 saveBtn.addEventListener("click", function () {
-	download(`${fileName.trim()}.txt`, textArea.value);
+	download(`${fileName.trim()}`, textArea.value);
 });
 
 function download(fileName, text) {
