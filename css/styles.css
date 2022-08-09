@@ -1,143 +1,178 @@
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	background-color: burlywood;
-	font-family: "Open Sans", sans-serif;
+  margin: 0;
+  background-color: burlywood;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* LAYOUT */
 
 main {
-	margin: 2rem 0;
+  margin: 2rem 0;
 }
 
 .container {
-	width: 95%;
-	max-width: 700px;
-	margin: 0 auto;
+  width: 95%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .d-flex {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin: 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.25rem 0;
 }
 
 .d-flex * {
-	width: 22.5%;
+  width: 22.5%;
 }
 
 .d-flex input[type="text"] {
-	width: 52.5%;
-	margin-left: -0.25em;
-	padding: 0.35em 0.25em;
+  width: 52.5%;
+  margin-left: -0.25em;
+  padding: 0.35em 0.25em;
 }
 
 textarea {
-	width: 100%;
+  width: 100%;
 }
 
 footer {
-	text-align: center;
-	background-color: #262626;
-	padding: 1rem 0 0.5rem 0;
+  text-align: center;
+  background-color: #262626;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 /* STYLING */
 
+.modal {
+  border: none;
+  border-radius: 1.15em;
+  width: 25%;
+  min-width: 300px;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal .warning {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: -0.25em;
+  margin-bottom: 0;
+}
+
+.modal .modal-msg {
+  margin-top: 0.25em;
+  margin-bottom: 2em;
+}
+
+.modal .btn {
+  width: 95%;
+}
+
 textarea:focus-visible,
 input[type="text"]:focus-visible {
-	outline: 1.5px solid black;
+  outline: 1.5px solid black;
 }
 
 .btn {
-	display: inline-block;
-	cursor: pointer;
-	border: none;
-	border-radius: 100em;
-	color: white;
-	background-color: darkred;
-	font-size: 1rem;
-	font-weight: bold;
-	padding: 0.5em 1em;
-	transition: all 0.3s linear;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  border-radius: 100em;
+  color: white;
+  background-color: darkred;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  transition: all 0.3s linear;
 }
 
 .btn:focus-visible {
-	outline: none;
-	box-shadow: 0 0 0 3px burlywood, 0 0 0 6px darkred;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem burlywood, 0 0 0 0.4rem darkred;
 }
 
 .btn:hover {
-	transform: scale(1.1);
-	opacity: 0.8;
-}
-
-.btn:active {
-	opacity: 0.6;
+  color: darkred;
+  background-color: white;
+  box-shadow: 0 0 0.5em 0.25em rgba(0, 0, 0, 0.5);
 }
 
 .example {
-	color: darkred;
-	font-weight: 600;
+  color: darkred;
+  font-weight: 600;
 }
 
-.github:hover {
-	opacity: 0.7;
+a:focus-visible {
+  outline: none;
+}
+
+a:focus-visible .g-github {
+  fill: #ff4b00;
+}
+
+.github:hover .g-github {
+  fill: white;
 }
 
 .small:hover {
-	color: white;
+  color: white;
 }
 
 .small:hover .g-heart {
-	fill: #ff4b00;
+  fill: #ff4b00;
 }
 
 .small:hover .svg-heart {
-	animation: heart-beat 0.5s linear forwards infinite alternate;
+  animation: heart-beat 0.5s linear forwards infinite alternate;
 }
 
 @keyframes heart-beat {
-	100% {
-		transform: scale(1.25);
-	}
+  100% {
+    transform: scale(1.25);
+  }
 }
 
 /* TYPOGRAPHY */
 
 h1 {
-	font-size: 2.5rem;
-	text-align: center;
-	padding-bottom: 0.25em;
-	border-bottom: 0.1em solid darkred;
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 0.25em;
+  border-bottom: 0.1em solid darkred;
 }
 
 h2 {
-	font-size: 1.75rem;
-	text-align: center;
-	margin: 1em 0 0 0;
+  font-size: 1.75rem;
+  text-align: center;
+  margin-top: 1em;
 }
 
 label {
-	font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 textarea,
 input[type="text"] {
-	font-size: 1rem;
+  font-size: 1rem;
 }
 
 p {
-	margin: 0.5em 0;
+  margin: 0.5em 0;
 }
 
 .small {
-	color: grey;
-	font-size: 0.75rem;
-	margin: 0;
+  color: grey;
+  font-size: 0.75rem;
+  margin: 0;
 }

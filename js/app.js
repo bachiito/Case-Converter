@@ -1,81 +1,93 @@
-const textArea = document.querySelector("textarea");
-const fileName = document.getElementById("file-name").value;
+const modal = document.querySelector(".modal");
+const modalMessage = document.querySelector(".modal-msg");
+const closeModal = document.querySelector(".close-modal");
+const form = document.getElementById("form");
+const fileName = document.getElementById("file-name");
+const textarea = document.getElementById("textarea");
+const upperCaseBtn = document.getElementById("upper-case");
+const lowerCaseBtn = document.getElementById("lower-case");
+const properCaseBtn = document.getElementById("proper-case");
+const sentenceCaseBtn = document.getElementById("sentence-case");
+const saveBtn = document.getElementById("save-text");
 
-let upperCaseBtn = document.getElementById("upper-case");
-upperCaseBtn.addEventListener("click", function () {
-	textArea.value = textArea.value.trim().toUpperCase();
-});
+upperCaseBtn.addEventListener(
+  "click",
+  () => (textarea.value = textarea.value.trim().toUpperCase())
+);
 
-let lowerCaseBtn = document.getElementById("lower-case");
-lowerCaseBtn.addEventListener("click", function () {
-	textArea.value = textArea.value.trim().toLocaleLowerCase();
-});
+lowerCaseBtn.addEventListener(
+  "click",
+  () => (textarea.value = textarea.value.trim().toLocaleLowerCase())
+);
 
 /**
- * Returns the textArea value with the first letter of every word capitalized
+ * Returns the textarea value with the first constter of every word capitalized
  * From: this is the proper case text
  * To: This Is The Proper Case Text
  */
 
-let properCaseBtn = document.getElementById("proper-case");
-properCaseBtn.addEventListener("click", properCase);
-
-function properCase() {
-	let finalString = "";
-	const array = textArea.value.trim().toLowerCase().split(" ");
-	array.forEach(
-		word =>
-			(finalString += `${word.charAt(0).toUpperCase().concat(word.slice(1))} `)
-	);
-	textArea.value = finalString.trim();
-}
+properCaseBtn.addEventListener("click", () => {
+  textarea.value = textarea.value
+    .trim()
+    .toLowerCase()
+    .split(" ")
+    .map(word => word.charAt(0).toUpperCase().concat(word.slice(1)))
+    .join(" ");
+});
 
 /**
- * Returns the textArea value with the first letter of every sentence capitalized
+ * Returns the textarea value with the first constter of every sentence capitalized
  * From: this is the sentence case. bro
  * To: This is the sentence case. Bro.
  */
 
-let sentenceCaseBtn = document.getElementById("sentence-case");
-sentenceCaseBtn.addEventListener("click", sentenceCase);
+sentenceCaseBtn.addEventListener("click", () => {
+  textarea.value = textarea.value
+    .trim()
+    .toLowerCase()
+    .split(". ")
+    .map(sentence => sentence.charAt(0).toUpperCase().concat(sentence.slice(1)))
+    .join(". ");
 
-function sentenceCase() {
-	let finalString = "";
-	const array = textArea.value.toLowerCase().split(".");
+  if (textarea.value.charAt(textarea.value.length - 1) !== ".") {
+    textarea.value += ".";
+  }
+});
 
-	for (let i = 0; i < array.length; i++) {
-		let sentence = array[i].trim();
+closeModal.addEventListener("click", () => {
+  modal.close();
+});
 
-		if (sentence.length > 0) {
-			finalString += `${sentence
-				.charAt(0)
-				.toUpperCase()
-				.concat(sentence.slice(1))}. `;
-		}
-	}
+saveBtn.addEventListener("click", () => {
+  if (fileName.value.length < 1) {
+    form.addEventListener("submit", e => e.preventDefault());
+    modalMessage.innerText = "Please give your file a name.";
+    modal.showModal();
+    return;
+  }
 
-	textArea.value = finalString.trim();
-}
+  if (textarea.value.length < 1) {
+    form.addEventListener("submit", e => e.preventDefault());
+    modalMessage.innerText = "Please enter the text you want to convert.";
+    modal.showModal();
+    return;
+  }
 
-/**
- * File saving function
- */
-
-let saveBtn = document.getElementById("save-text");
-saveBtn.addEventListener("click", function () {
-	download(`${fileName.trim()}`, textArea.value);
+  download(`${fileName.value.trim()}.txt`, textarea.value);
 });
 
 function download(fileName, text) {
-	let a = document.createElement("a");
-	a.setAttribute(
-		"href",
-		"data:text/plain; charset=UTF-8," + encodeURIComponent(text)
-	);
-	a.setAttribute("download", fileName);
-	a.style.display = "none";
+  const a = document.createElement("a");
 
-	document.body.appendChild(a);
-	a.click();
-	document.body.removeChild(a);
+  a.setAttribute(
+    "href",
+    "data:text/plain; charset=UTF-8," + encodeURIComponent(text)
+  );
+
+  a.setAttribute("download", fileName);
+  a.style.display = "none";
+
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 }
